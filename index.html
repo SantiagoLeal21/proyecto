@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elasticidad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #4b4372, #6f4f8f);
+      color: #ececec;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .contenido {
+      flex: 3;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .introduccion h1 {
+      font-size: 2.5rem;
+      color: #bb99ff;
+      margin-bottom: 1rem;
+    }
+
+    .introduccion h2 {
+      font-size: 1.8rem;
+      color: #9f7aea;
+      margin-top: 1.5rem;
+    }
+
+    .introduccion p,
+    .introduccion ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .introduccion ul {
+      margin-left: 1.5rem;
+    }
+
+    .introduccion li {
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+
+    .botones-simuladores {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      color: #9f7aea;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #9f7aea;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #bb99ff;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        align-items: center;
+      }
+
+      .sidebar h2,
+      .botones-simuladores {
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sección izquierda: Contenido -->
+    <section class="contenido introduccion">
+      <h1>¿Qué es la Elasticidad?</h1>
+      <p>
+        La elasticidad es una propiedad mecánica de los materiales que describe su capacidad para deformarse cuando se les aplica una fuerza, y regresar a su forma original cuando la fuerza desaparece. 
+        Es un concepto fundamental en la física y la ingeniería para comprender el comportamiento de objetos sometidos a tensión o compresión.
+      </p>
+
+      <h2>Ley de Hooke</h2>
+      <p>
+        La ley de Hooke establece que el alargamiento de un resorte (o de cualquier objeto elástico) es directamente proporcional a la fuerza aplicada sobre él, siempre que no se supere el límite elástico del material:
+      </p>
+      <p><strong>F = -k · x</strong></p>
+      <ul>
+        <li><strong>F</strong>: Fuerza restauradora (N)</li>
+        <li><strong>k</strong>: Constante elástica del material (N/m)</li>
+        <li><strong>x</strong>: Deformación o desplazamiento desde la posición de equilibrio (m)</li>
+      </ul>
+
+      <h2>Tipos de Elasticidad</h2>
+      <ul>
+        <li><strong>Elasticidad lineal:</strong> La deformación es proporcional a la fuerza aplicada (como en resortes).</li>
+        <li><strong>Elasticidad no lineal:</strong> La relación fuerza-deformación no es proporcional (como gomas o cuerdas especiales).</li>
+        <li><strong>Elasticidad uniaxial:</strong> Cuando la fuerza se aplica en una sola dirección.</li>
+        <li><strong>Elasticidad volumétrica:</strong> Cuando el cuerpo se deforma en todas las direcciones (como una burbuja de aire).</li>
+      </ul>
+
+      <h2>Energía Potencial Elástica</h2>
+      <p>
+        Cuando un objeto elástico se estira o comprime, almacena energía. Esta energía se llama energía potencial elástica y se calcula con la siguiente fórmula:
+      </p>
+      <p><strong>E = (1/2) · k · x²</strong></p>
+
+      <h2>Ejemplos comunes de elasticidad</h2>
+      <ul>
+        <li>Resortes en colchones o amortiguadores.</li>
+        <li>Bandas elásticas y gomas.</li>
+        <li>Puentes colgantes que se deforman con el viento o vehículos.</li>
+        <li>Cuerdas tensadas en instrumentos musicales.</li>
+      </ul>
+
+      <h2>Importancia de la Elasticidad</h2>
+      <p>
+        Entender la elasticidad permite diseñar estructuras más seguras, materiales más eficientes, y herramientas científicas que simulan comportamientos reales.
+        En este simulador podrás experimentar con diferentes materiales y comprobar cómo responden ante distintas fuerzas aplicadas.
+      </p>
+    </section>
+
+    <!-- Sección derecha: Botones arriba -->
+    <aside class="sidebar">
+         <h2>¿Quieres ir a los simuladores?</h2>
+      <div class="botones-simuladores">
+        <a href="resorte.html" class="btn">Simulador de Resorte</a>
+        <a href="goma.html" class="btn">Simulador de Goma</a>
+        <a href="cuerda.html" class="btn">Simulador de Cuerda</a>
+      </div>
+      
+    </aside>
+  </div>
+</body>
+</html>
